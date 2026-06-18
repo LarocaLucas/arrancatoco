@@ -6,6 +6,13 @@
    Não é necessário conhecimento de programação para as atualizações comuns.
    ============================================================ */
 
+/**
+ * Base URL do site, detectada automaticamente pelo Vite.
+ * Local: "/" | GitHub Pages: "/arrancatoco/" | Cloudflare: "/"
+ * @type {string}
+ */
+const BASE = import.meta.env.BASE_URL;
+
 export const CONFIG = {
   event: {
     name: "Arranca Toco",
@@ -32,17 +39,17 @@ export const CONFIG = {
   hero: {
     // TODO: Alterar para true quando o arquivo de vídeo estiver disponível
     useVideo: false,
-    videoSrc: "/video/hero-video.mp4",
-    fallbackImage: "/images/fallback-hero.jpg",
+    videoSrc: `${BASE}video/hero-video.mp4`,
+    fallbackImage: `${BASE}images/fallback-hero.jpg`,
     fallbackAlt: "Arranca Toco 2026 — 25 Anos"
   },
   artists: [
-    { id: 1, name: "???", revealDate: null, isRevealed: false, hiddenImage: "/images/artists/artist-1-hidden.png", revealedImage: "/images/artists/artist-1-revealed.png", altHidden: "Artista 1 — Em breve", altRevealed: "Artista 1" },
-    { id: 2, name: "???", revealDate: null, isRevealed: false, hiddenImage: "/images/artists/artist-2-hidden.png", revealedImage: "/images/artists/artist-2-revealed.png", altHidden: "Artista 2 — Em breve", altRevealed: "Artista 2" },
-    { id: 3, name: "???", revealDate: null, isRevealed: false, hiddenImage: "/images/artists/artist-3-hidden.png", revealedImage: "/images/artists/artist-3-revealed.png", altHidden: "Artista 3 — Em breve", altRevealed: "Artista 3" },
-    { id: 4, name: "???", revealDate: null, isRevealed: false, hiddenImage: "/images/artists/artist-4-hidden.png", revealedImage: "/images/artists/artist-4-revealed.png", altHidden: "Artista 4 — Em breve", altRevealed: "Artista 4" },
-    { id: 5, name: "???", revealDate: null, isRevealed: false, hiddenImage: "/images/artists/artist-5-hidden.png", revealedImage: "/images/artists/artist-5-revealed.png", altHidden: "Artista 5 — Em breve", altRevealed: "Artista 5" },
-    { id: 6, name: "???", revealDate: null, isRevealed: false, hiddenImage: "/images/artists/artist-6-hidden.png", revealedImage: "/images/artists/artist-6-revealed.png", altHidden: "Artista 6 — Em breve", altRevealed: "Artista 6" }
+    { id: 1, name: "???", revealDate: null, isRevealed: false, hiddenImage: `${BASE}images/artists/artist-1-hidden.png`, revealedImage: `${BASE}images/artists/artist-1-revealed.png`, altHidden: "Artista 1 — Em breve", altRevealed: "Artista 1" },
+    { id: 2, name: "???", revealDate: null, isRevealed: false, hiddenImage: `${BASE}images/artists/artist-2-hidden.png`, revealedImage: `${BASE}images/artists/artist-2-revealed.png`, altHidden: "Artista 2 — Em breve", altRevealed: "Artista 2" },
+    { id: 3, name: "???", revealDate: null, isRevealed: false, hiddenImage: `${BASE}images/artists/artist-3-hidden.png`, revealedImage: `${BASE}images/artists/artist-3-revealed.png`, altHidden: "Artista 3 — Em breve", altRevealed: "Artista 3" },
+    { id: 4, name: "???", revealDate: null, isRevealed: false, hiddenImage: `${BASE}images/artists/artist-4-hidden.png`, revealedImage: `${BASE}images/artists/artist-4-revealed.png`, altHidden: "Artista 4 — Em breve", altRevealed: "Artista 4" },
+    { id: 5, name: "???", revealDate: null, isRevealed: false, hiddenImage: `${BASE}images/artists/artist-5-hidden.png`, revealedImage: `${BASE}images/artists/artist-5-revealed.png`, altHidden: "Artista 5 — Em breve", altRevealed: "Artista 5" },
+    { id: 6, name: "???", revealDate: null, isRevealed: false, hiddenImage: `${BASE}images/artists/artist-6-hidden.png`, revealedImage: `${BASE}images/artists/artist-6-revealed.png`, altHidden: "Artista 6 — Em breve", altRevealed: "Artista 6" }
   ],
   tickets: {
     pista: [
