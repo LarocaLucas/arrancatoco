@@ -1,0 +1,68 @@
+/* ============================================================
+   about.css — About Section — Arranca Toco 2026
+   Seção "Sobre" com bloco de texto revelado via scroll,
+   eyebrow, título display, divisor dourado e descrição.
+   ============================================================ */
+
+/* ----- Section wrapper ----- */
+.about {
+  background: var(--color-bg-deepest);
+  padding: var(--space-2xl) 0;
+}
+
+/* ----- Narrow container ----- */
+.about__container {
+  max-width: 800px;
+}
+
+/* ----- Scroll-reveal text block ----- */
+.about__text-block {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow);
+}
+
+.about__text-block.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ----- Eyebrow ----- */
+.about__eyebrow {
+  font-family: var(--font-label);
+  font-size: var(--text-sm);
+  color: var(--color-gold);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+/* ----- Title ----- */
+.about__title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  color: var(--color-white);
+  line-height: 0.9;
+  margin-bottom: var(--space-md);
+}
+
+/* ----- Divider ----- */
+.about__divider {
+  width: 60px;
+  height: 3px;
+  background: var(--color-gold);
+  box-shadow: var(--glow-gold);
+  margin-bottom: var(--space-md);
+}
+
+/* ----- Description ----- */
+.about__description {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  color: var(--color-muted);
+  line-height: 1.8;
+  max-width: 65ch;
+}

@@ -1,0 +1,124 @@
+/* ============================================================
+   location.css — Location Section — Arranca Toco 2026
+   Seção de localização com grid responsivo (info + mapa),
+   animações de scroll-reveal, ícones de detalhe e mapa embutido.
+   ============================================================ */
+
+/* ----- Section wrapper ----- */
+.location {
+  background: var(--color-bg-base);
+  padding: var(--space-2xl) 0;
+}
+
+/* ----- Container: mobile-first, stacked ----- */
+.location__container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .location__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    align-items: center;
+  }
+}
+
+/* ----- Scroll-reveal ----- */
+.location__info,
+.location__map-wrapper {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity var(--transition-slow),
+    transform var(--transition-slow);
+}
+
+.location__info.is-visible,
+.location__map-wrapper.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ----- Eyebrow ----- */
+.location__eyebrow {
+  font-family: var(--font-label);
+  font-size: var(--text-sm);
+  color: var(--color-gold);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+/* ----- Title ----- */
+.location__title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  color: var(--color-white);
+  line-height: 0.9;
+  margin-bottom: var(--space-md);
+}
+
+/* ----- Divider ----- */
+.location__divider {
+  width: 60px;
+  height: 3px;
+  background: var(--color-gold);
+  box-shadow: var(--glow-gold);
+  margin-bottom: var(--space-md);
+}
+
+/* ----- Details ----- */
+.location__details {
+  margin-bottom: var(--space-md);
+}
+
+.location__detail-item {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: flex-start;
+  margin-bottom: var(--space-md);
+}
+
+.location__detail-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+.location__detail-label {
+  font-family: var(--font-label);
+  color: var(--color-gold);
+  font-size: var(--text-xs);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: block;
+}
+
+.location__detail-value {
+  font-family: var(--font-body);
+  color: var(--color-white);
+  font-size: var(--text-md);
+  display: block;
+}
+
+/* ----- Map ----- */
+.location__map {
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: var(--border-gold);
+  aspect-ratio: 16 / 9;
+}
+
+@media (min-width: 768px) {
+  .location__map {
+    height: 400px;
+    aspect-ratio: auto;
+  }
+}

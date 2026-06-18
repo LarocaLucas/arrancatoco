@@ -1,0 +1,88 @@
+/* ============================================================
+   floating-btn.css — Floating Buy Button — Arranca Toco 2026
+   Botão flutuante fixo no canto inferior direito com estados
+   visível/oculto, animação pulsante dourada, tooltip no hover
+   e transição suave de entrada.
+   ============================================================ */
+
+/* ----- Floating button ----- */
+.floating-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: var(--z-floating);
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  color: var(--color-bg-base);
+  box-shadow: var(--glow-gold);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+/* ----- Hidden state ----- */
+.floating-btn--hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100px);
+}
+
+/* ----- Visible state ----- */
+.floating-btn--visible {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(0);
+  animation: pulseGold 2s ease-in-out infinite;
+}
+
+/* ----- Hover ----- */
+.floating-btn:hover {
+  background: var(--color-gold-light);
+  transform: scale(1.08);
+}
+
+/* ----- Icon ----- */
+.floating-btn__icon {
+  width: 26px;
+  height: 26px;
+}
+
+/* ----- Tooltip ----- */
+.floating-btn__tooltip {
+  position: absolute;
+  right: calc(100% + 0.75rem);
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--color-bg-card);
+  color: var(--color-white);
+  font-family: var(--font-label);
+  font-size: var(--text-xs);
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  border: var(--border-muted);
+}
+
+.floating-btn:hover .floating-btn__tooltip {
+  opacity: 1;
+}
+
+/* ----- Pulse animation (shared with tickets) ----- */
+@keyframes pulseGold {
+  0%,
+  100% {
+    box-shadow: var(--glow-gold);
+  }
+  50% {
+    box-shadow: var(--glow-gold-intense);
+  }
+}

@@ -1,0 +1,75 @@
+/* ============================================================
+   variables.css — Design Tokens do Arranca Toco 2026
+   Todas as propriedades de design do projeto centralizadas aqui.
+   Para alterar cores, fontes ou espaçamentos, edite apenas este arquivo.
+   ============================================================ */
+
+:root {
+  /* --- Cores principais (baseadas no flyer oficial) --- */
+  --color-bg-deepest:  #080E2E;
+  --color-bg-base:     #0F1640;
+  --color-bg-card:     #162066;
+  --color-bg-surface:  #1E2D80;
+
+  --color-gold:        #FFB800;
+  --color-gold-light:  #FFD060;
+  --color-gold-dark:   #CC8F00;
+
+  --color-white:       #FFFFFF;
+  --color-muted:       rgba(255, 255, 255, 0.55);
+  --color-disabled:    rgba(255, 255, 255, 0.25);
+
+  /* --- Efeitos neon/glow --- */
+  --glow-gold:         0 0 12px rgba(255, 184, 0, 0.5),
+                       0 0 30px rgba(255, 184, 0, 0.25);
+  --glow-gold-intense: 0 0 20px rgba(255, 184, 0, 0.8),
+                       0 0 60px rgba(255, 184, 0, 0.4);
+  --glow-blue:         0 0 20px rgba(22, 32, 102, 0.8);
+
+  /* --- Bordas --- */
+  --border-gold:       1px solid rgba(255, 184, 0, 0.4);
+  --border-gold-active: 2px solid var(--color-gold);
+  --border-muted:      1px solid rgba(255, 255, 255, 0.1);
+
+  /* --- Tipografia --- */
+  --font-display:  'Bebas Neue', Impact, 'Arial Narrow', sans-serif;
+  --font-label:    'Rajdhani', 'Arial Narrow', sans-serif;
+  --font-body:     'Inter', 'Segoe UI', Arial, sans-serif;
+
+  /* --- Escala de tamanhos de texto --- */
+  --text-xs:    clamp(0.65rem,  1.5vw, 0.75rem);
+  --text-sm:    clamp(0.8rem,   2vw,   0.9rem);
+  --text-base:  clamp(0.9rem,   2.5vw, 1rem);
+  --text-md:    clamp(1rem,     3vw,   1.125rem);
+  --text-lg:    clamp(1.2rem,   4vw,   1.5rem);
+  --text-xl:    clamp(1.5rem,   5vw,   2rem);
+  --text-2xl:   clamp(2rem,     6vw,   3rem);
+  --text-3xl:   clamp(2.5rem,   8vw,   4.5rem);
+  --text-hero:  clamp(3.5rem,   12vw,  7rem);
+
+  /* --- Espaçamentos --- */
+  --space-xs:   0.5rem;
+  --space-sm:   1rem;
+  --space-md:   2rem;
+  --space-lg:   4rem;
+  --space-xl:   6rem;
+  --space-2xl:  8rem;
+
+  /* --- Bordas arredondadas --- */
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  20px;
+  --radius-full: 9999px;
+
+  /* --- Transições --- */
+  --transition-fast:   0.15s ease;
+  --transition-base:   0.3s ease;
+  --transition-slow:   0.6s ease;
+  --transition-reveal: 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* --- Z-index --- */
+  --z-base:     1;
+  --z-overlay:  10;
+  --z-sticky:   100;
+  --z-floating: 1000;
+}

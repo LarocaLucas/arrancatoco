@@ -1,0 +1,167 @@
+/* ============================================================
+   artists.css — Artists Section — Arranca Toco 2026
+   Seção de artistas com grid responsivo e cards 3D flip.
+   Cada card revela foto e nome do artista ao ser clicado/revelado.
+   ============================================================ */
+
+/* ----- Section wrapper ----- */
+.artists {
+  background: var(--color-bg-deepest);
+  padding: var(--space-2xl) 0;
+}
+
+/* ----- Container ----- */
+.artists__container {
+  text-align: center;
+}
+
+/* ----- Eyebrow ----- */
+.artists__eyebrow {
+  font-family: var(--font-label);
+  font-size: var(--text-sm);
+  color: var(--color-gold);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+/* ----- Title ----- */
+.artists__title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  color: var(--color-white);
+  line-height: 0.9;
+  margin-bottom: var(--space-md);
+}
+
+/* ----- Divider (centered) ----- */
+.artists__divider {
+  width: 60px;
+  height: 3px;
+  background: var(--color-gold);
+  box-shadow: var(--glow-gold);
+  margin: 0 auto var(--space-md);
+}
+
+/* ----- Grid ----- */
+.artists__grid {
+  display: grid;
+  gap: var(--space-md);
+
+  /* Mobile: single column */
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .artists__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1440px) {
+  .artists__grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* ----- Card: perspective container ----- */
+.artist-card {
+  perspective: 800px;
+  cursor: pointer;
+}
+
+/* ----- Flipper ----- */
+.artist-card__flipper {
+  position: relative;
+  width: 100%;
+  padding-top: 140%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  will-change: transform;
+}
+
+.artist-card--revealed .artist-card__flipper {
+  transform: rotateY(180deg);
+}
+
+/* ----- Front & Back faces ----- */
+.artist-card__front,
+.artist-card__back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+/* Front face */
+.artist-card__front {
+  background: var(--color-bg-card);
+  border: var(--border-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Back face */
+.artist-card__back {
+  transform: rotateY(180deg);
+  background: var(--color-bg-card);
+  border: var(--border-gold-active);
+  box-shadow: var(--glow-gold);
+}
+
+/* ----- Artist image ----- */
+.artist-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+/* ----- Artist name ----- */
+.artist-card__name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-white);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+  z-index: 2;
+}
+
+/* ----- Front face countdown wrapper ----- */
+.artist-card__countdown-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(8, 14, 46, 0.9));
+  padding: 1.5rem 1rem;
+  text-align: center;
+  z-index: 2;
+}
+
+.artist-card__countdown-label {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.artist-card__countdown {
+  font-family: var(--font-label);
+  font-size: var(--text-sm);
+  color: var(--color-gold);
+  letter-spacing: 0.1em;
+}

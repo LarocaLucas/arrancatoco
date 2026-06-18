@@ -1,0 +1,227 @@
+/* ============================================================
+   tickets.css — Tickets Section — Arranca Toco 2026
+   Seção de ingressos com painéis de lotes (passados, ativo,
+   futuros), animação de riscado para esgotados, glow pulsante
+   no lote ativo e layout flex responsivo.
+   ============================================================ */
+
+/* ----- Section wrapper ----- */
+.tickets {
+  background: var(--color-bg-base);
+  padding: var(--space-2xl) 0;
+}
+
+/* ----- Container ----- */
+.tickets__container {
+  text-align: center;
+}
+
+/* ----- Eyebrow ----- */
+.tickets__eyebrow {
+  font-family: var(--font-label);
+  font-size: var(--text-sm);
+  color: var(--color-gold);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+/* ----- Title ----- */
+.tickets__title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  color: var(--color-white);
+  line-height: 0.9;
+  margin-bottom: var(--space-md);
+}
+
+/* ----- Divider (centered) ----- */
+.tickets__divider {
+  width: 60px;
+  height: 3px;
+  background: var(--color-gold);
+  box-shadow: var(--glow-gold);
+  margin: 0 auto var(--space-md);
+}
+
+/* ----- Panels layout ----- */
+.tickets__panels {
+  display: flex;
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+
+  /* Mobile: stacked */
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .tickets__panels {
+    flex-direction: row;
+  }
+}
+
+/* ----- Panel ----- */
+.tickets__panel {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-md);
+  border: var(--border-muted);
+  padding: var(--space-md);
+  flex: 1;
+  text-align: left;
+}
+
+/* ----- Panel header ----- */
+.tickets__panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: var(--border-gold);
+}
+
+.tickets__panel-title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--color-white);
+  letter-spacing: 0.1em;
+}
+
+.tickets__panel-badge {
+  font-family: var(--font-label);
+  font-size: var(--text-xs);
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* ----- Lot list ----- */
+.tickets__lot-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ----- Individual lot item ----- */
+.lot-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm);
+  border-bottom: var(--border-muted);
+  position: relative;
+  transition: all var(--transition-base);
+}
+
+.lot-item__name {
+  font-family: var(--font-label);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  letter-spacing: 0.05em;
+}
+
+.lot-item__price {
+  font-family: var(--font-label);
+  font-size: var(--text-md);
+  color: var(--color-white);
+}
+
+/* ----- Past lot (sold out) ----- */
+.lot-item--past .lot-item__name,
+.lot-item--past .lot-item__price {
+  color: var(--color-disabled);
+  opacity: 0.5;
+}
+
+.lot-item--past .lot-item__name {
+  position: relative;
+}
+
+.lot-item--past .lot-item__name::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 1.5px;
+  background: var(--color-disabled);
+  width: 0;
+  animation: strikethrough 0.5s ease forwards;
+}
+
+.lot-item--past.is-visible .lot-item__name::after {
+  animation: strikethrough 0.5s ease forwards;
+}
+
+@keyframes strikethrough {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* ----- Active lot ----- */
+.lot-item--active {
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-surface);
+  box-shadow: var(--glow-gold-intense);
+  animation: pulseGold 2s ease-in-out infinite;
+  padding: var(--space-sm) var(--space-md);
+}
+
+.lot-item--active .lot-item__price {
+  color: var(--color-gold);
+  font-size: var(--text-lg);
+  font-family: var(--font-display);
+}
+
+.lot-item--active .lot-item__name {
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+/* ----- Active lot badge ----- */
+.lot-item__badge {
+  position: absolute;
+  top: -0.75rem;
+  right: 1rem;
+  background: var(--color-gold);
+  color: var(--color-bg-base);
+  font-family: var(--font-label);
+  font-size: var(--text-xs);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+/* ----- Upcoming lot ----- */
+.lot-item--upcoming {
+  opacity: 0.45;
+}
+
+/* ----- Pulse animation ----- */
+@keyframes pulseGold {
+  0%,
+  100% {
+    box-shadow: var(--glow-gold);
+  }
+  50% {
+    box-shadow: var(--glow-gold-intense);
+  }
+}
+
+/* ----- CTA ----- */
+.tickets__cta {
+  text-align: center;
+  margin-top: var(--space-lg);
+}
+
+.tickets__cta-note {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  margin-top: var(--space-sm);
+}

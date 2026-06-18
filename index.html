@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- =============================================
+       META TAGS, SEO E OPEN GRAPH
+       ============================================= -->
+
+  <!-- SEO Base -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="Arranca Toco 2026 — 25 Anos. O maior Open Bar dos Campos Gerais.
+                 Eng. Civil UEPG — 5° Ano. 15 de Agosto, Centro de Eventos, Ponta Grossa — PR.">
+  <meta name="keywords"
+        content="Arranca Toco, open bar, Ponta Grossa, UEPG, Engenharia Civil, festa universitária, Campos Gerais">
+  <meta name="author" content="Laroca Dev — laroca.dev">
+  <meta name="robots" content="index, follow">
+  <title>Arranca Toco 2026 — 25 Anos | O Maior Open Bar dos Campos Gerais</title>
+
+  <!-- Open Graph (WhatsApp, Instagram, Facebook) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Arranca Toco 2026 — 25 Anos">
+  <meta property="og:description"
+        content="O maior Open Bar dos Campos Gerais. 15 de Agosto, Centro de Eventos, Ponta Grossa — PR.">
+  <meta property="og:image" content="/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- TODO: Atualizar og:url quando o domínio for definido -->
+  <meta property="og:url" content="https://arrancatoco.com.br">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Arranca Toco 2026">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Arranca Toco 2026 — 25 Anos">
+  <meta name="twitter:description"
+        content="O maior Open Bar dos Campos Gerais. 15 de Agosto, Ponta Grossa — PR.">
+  <meta name="twitter:image" content="/og-image.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <!-- TODO: Substituir pelo favicon oficial quando fornecido -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <!-- Entry point do Vite -->
+  <script type="module" src="/src/js/main.js"></script>
+</head>
+
+<body>
+
+  <!-- =============================================
+       SEÇÃO HERO — Vídeo de fundo + Logo + Countdown
+       ============================================= -->
+  <section id="hero" class="hero">
+
+    <!-- Fundo: vídeo ou imagem fallback -->
+    <div class="hero__background">
+      <video class="hero__video" autoplay muted loop playsinline
+             preload="metadata"
+             poster="/images/fallback-hero.jpg">
+        <source src="/video/hero-video.mp4" type="video/mp4">
+      </video>
+      <!-- TODO: Substituir pela imagem oficial do hero -->
+      <img class="hero__fallback" src="/images/fallback-hero.jpg"
+           alt="Arranca Toco 2026" aria-hidden="true" loading="eager">
+    </div>
+
+    <!-- Overlay gradiente -->
+    <div class="hero__overlay" aria-hidden="true"></div>
+
+    <!-- Conteúdo central -->
+    <div class="hero__content">
+      <!-- Logo do evento -->
+      <div class="hero__logo-wrapper">
+        <!-- TODO: Substituir pelo logo oficial quando fornecido -->
+        <img class="hero__logo" src="/images/logo-evento.png"
+             alt="Arranca Toco 25 Anos" loading="eager">
+      </div>
+
+      <!-- Informação do organizador -->
+      <p class="hero__organizer">Eng. Civil UEPG — 5° Ano</p>
+
+      <!-- Countdown regressivo até o evento -->
+      <div class="hero__countdown" id="heroCountdown" role="timer"
+           aria-label="Contagem regressiva para o evento">
+        <div class="countdown__unit">
+          <span class="countdown__value" id="countDays">00</span>
+          <span class="countdown__label">Dias</span>
+        </div>
+        <span class="countdown__separator" aria-hidden="true">:</span>
+        <div class="countdown__unit">
+          <span class="countdown__value" id="countHours">00</span>
+          <span class="countdown__label">Horas</span>
+        </div>
+        <span class="countdown__separator" aria-hidden="true">:</span>
+        <div class="countdown__unit">
+          <span class="countdown__value" id="countMinutes">00</span>
+          <span class="countdown__label">Min</span>
+        </div>
+        <span class="countdown__separator" aria-hidden="true">:</span>
+        <div class="countdown__unit">
+          <span class="countdown__value" id="countSeconds">00</span>
+          <span class="countdown__label">Seg</span>
+        </div>
+      </div>
+
+      <!-- CTA de compra -->
+      <!-- TODO: Substituir '#' pelo link real do Cheers -->
+      <a href="#" id="heroCTABtn" class="btn btn--gold btn--hero"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Comprar ingresso na plataforma Cheers">
+        GARANTIR MEU INGRESSO
+      </a>
+    </div>
+
+    <!-- Indicador de scroll -->
+    <div class="hero__scroll-indicator" aria-hidden="true">
+      <span class="scroll-indicator__text">scroll</span>
+      <span class="scroll-indicator__line"></span>
+    </div>
+
+  </section>
+
+
+  <!-- =============================================
+       SEÇÃO SOBRE — Breve descrição do evento
+       ============================================= -->
+  <section id="sobre" class="about">
+    <div class="about__container container">
+      <div class="about__text-block">
+        <!-- Eyebrow label -->
+        <span class="about__eyebrow">O Maior Open Bar dos Campos Gerais</span>
+        <!-- Título de impacto -->
+        <h2 class="about__title">25 ANOS<br>DE HISTÓRIA</h2>
+        <!-- Linha decorativa -->
+        <div class="about__divider" aria-hidden="true"></div>
+        <!-- Texto de descrição -->
+        <!-- TODO: Substituir pelo texto oficial da organização -->
+        <p class="about__description" id="aboutDescription">
+          <!-- Preenchido dinamicamente pelo JS a partir do CONFIG -->
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       SEÇÃO LOCALIZAÇÃO — Venue, endereço, mapa
+       ============================================= -->
+  <section id="localizacao" class="location">
+    <div class="location__container container">
+
+      <!-- Coluna de informações -->
+      <div class="location__info">
+        <span class="location__eyebrow">Onde vai acontecer</span>
+        <h2 class="location__title">LOCALIZAÇÃO</h2>
+        <div class="location__divider" aria-hidden="true"></div>
+
+        <div class="location__details">
+          <!-- Data e hora -->
+          <div class="location__detail-item">
+            <span class="location__detail-icon" aria-hidden="true">
+              <!-- SVG ícone calendário -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </span>
+            <div>
+              <span class="location__detail-label">DATA</span>
+              <span class="location__detail-value" id="locationDate">
+                <!-- Preenchido pelo JS -->
+              </span>
+            </div>
+          </div>
+
+          <!-- Horário -->
+          <div class="location__detail-item">
+            <span class="location__detail-icon" aria-hidden="true">
+              <!-- SVG ícone relógio -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </span>
+            <div>
+              <span class="location__detail-label">HORÁRIO</span>
+              <span class="location__detail-value">A partir das 16h</span>
+            </div>
+          </div>
+
+          <!-- Local -->
+          <div class="location__detail-item">
+            <span class="location__detail-icon" aria-hidden="true">
+              <!-- SVG ícone pin -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </span>
+            <div>
+              <span class="location__detail-label">LOCAL</span>
+              <span class="location__detail-value" id="locationVenue">
+                <!-- Preenchido pelo JS -->
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TODO: Link do Maps será preenchido pelo JS -->
+        <a href="#" id="mapsBtn" class="btn btn--gold"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Abrir localização no Google Maps">
+          COMO CHEGAR
+        </a>
+      </div>
+
+      <!-- Mapa -->
+      <div class="location__map-wrapper">
+        <!-- TODO: Embed URL do Google Maps será definida pelo JS -->
+        <iframe
+          id="locationMap"
+          class="location__map"
+          src=""
+          title="Localização do Centro de Eventos — Ponta Grossa PR"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       SEÇÃO ARTISTAS — Lineup com reveal progressivo
+       ============================================= -->
+  <section id="artistas" class="artists">
+    <div class="artists__container container">
+
+      <span class="artists__eyebrow">Line-up</span>
+      <h2 class="artists__title">ARTISTAS</h2>
+      <div class="artists__divider" aria-hidden="true"></div>
+
+      <!-- Grid de cards — gerado pelo JS -->
+      <div class="artists__grid" id="artistsGrid">
+        <!-- Cards de artistas renderizados dinamicamente pelo artists.js -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       SEÇÃO INGRESSOS — Lotes de Pista e Camarote
+       ============================================= -->
+  <section id="ingressos" class="tickets">
+    <div class="tickets__container container">
+
+      <span class="tickets__eyebrow">Open Bar Completo</span>
+      <h2 class="tickets__title">INGRESSOS</h2>
+      <div class="tickets__divider" aria-hidden="true"></div>
+
+      <!-- Painéis lado a lado -->
+      <div class="tickets__panels">
+
+        <!-- Painel Pista -->
+        <div class="tickets__panel tickets__panel--pista">
+          <div class="tickets__panel-header">
+            <h3 class="tickets__panel-title">PISTA</h3>
+            <span class="tickets__panel-badge">Open Bar Incluso</span>
+          </div>
+          <ul class="tickets__lot-list" id="pistaLotList" aria-label="Lotes de Pista">
+            <!-- Gerado pelo JS -->
+          </ul>
+        </div>
+
+        <!-- Painel Camarote -->
+        <div class="tickets__panel tickets__panel--camarote">
+          <div class="tickets__panel-header">
+            <h3 class="tickets__panel-title">CAMAROTE</h3>
+            <span class="tickets__panel-badge">Open Bar Premium</span>
+          </div>
+          <ul class="tickets__lot-list" id="camaroteLotList" aria-label="Lotes de Camarote">
+            <!-- Gerado pelo JS -->
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- CTA central -->
+      <div class="tickets__cta">
+        <!-- TODO: Substituir '#' pelo link real do Cheers -->
+        <a href="#" id="ticketsCTABtn" class="btn btn--gold btn--large"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Comprar ingresso na plataforma Cheers">
+          COMPRAR INGRESSO
+        </a>
+        <p class="tickets__cta-note">Vendas pela plataforma Cheers</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       FOOTER — Logos, redes sociais e créditos
+       ============================================= -->
+  <footer class="footer">
+    <div class="footer__container container">
+
+      <!-- Logo do evento -->
+      <div class="footer__brand">
+        <!-- TODO: Substituir pelo logo oficial -->
+        <img src="/images/logo-evento.png" alt="Arranca Toco 2026"
+             class="footer__logo" loading="lazy">
+        <p class="footer__tagline">O Maior Open Bar dos Campos Gerais</p>
+      </div>
+
+      <!-- Redes sociais -->
+      <div class="footer__social">
+        <p class="footer__social-label">Siga o evento</p>
+        <a href="https://www.instagram.com/arranca_oficial/"
+           class="footer__social-link"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Instagram do Arranca Toco">
+          <!-- SVG do Instagram inline -->
+          <svg class="footer__social-icon" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round"
+               stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          @arranca_oficial
+        </a>
+      </div>
+
+      <!-- Produtoras e crédito -->
+      <div class="footer__producers">
+        <p class="footer__producers-label">Realização</p>
+        <div class="footer__producers-logos">
+          <!-- TODO: Substituir pelos logos reais quando fornecidos -->
+          <img src="/images/logo-tf.png" alt="Produtora TF"
+               class="footer__producer-logo" loading="lazy">
+          <img src="/images/logo-mgprd.png" alt="MGPRD Produções e Eventos"
+               class="footer__producer-logo" loading="lazy">
+        </div>
+        <p class="footer__dev-credit">
+          Desenvolvido por
+          <a href="https://laroca.dev/" target="_blank" rel="noopener noreferrer"
+             class="footer__dev-link" aria-label="Laroca Dev — Desenvolvimento Web">
+            Laroca.dev
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Linha final de copyright -->
+    <div class="footer__bottom">
+      <p class="footer__copyright">
+        © 2026 Arranca Toco. Todos os direitos reservados.
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- =============================================
+       BOTÃO FLUTUANTE — Comprar ingresso (aparece após hero)
+       ============================================= -->
+  <!-- TODO: Substituir '#' pelo link real do Cheers -->
+  <a href="#" id="floatingTicketBtn"
+     class="floating-btn floating-btn--hidden"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Comprar ingresso">
+
+    <!-- SVG de ingresso inline -->
+    <svg class="floating-btn__icon" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor" stroke-width="2"
+         xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2
+               a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v2z"/>
+      <path d="M13 5v14M11 5v14"/>
+    </svg>
+
+    <!-- Tooltip -->
+    <span class="floating-btn__tooltip" aria-hidden="true">Comprar Ingresso</span>
+
+  </a>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+/* ============================================================
+   footer.css — Footer — Arranca Toco 2026
+   Rodapé com grid responsivo de 3 colunas (logo, social,
+   produtores), borda dourada, crédito do dev e copyright.
+   ============================================================ */
+
+/* ----- Footer wrapper ----- */
+.footer {
+  background: var(--color-bg-deepest);
+  border-top: var(--border-gold);
+  padding: var(--space-lg) 0 0;
+}
+
+/* ----- Container: mobile-first ----- */
+.footer__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  align-items: start;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer__container {
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: left;
+  }
+}
+
+/* ----- Logo ----- */
+.footer__logo {
+  max-width: 120px;
+}
+
+@media (max-width: 767px) {
+  .footer__logo {
+    margin: 0 auto;
+  }
+}
+
+/* ----- Tagline ----- */
+.footer__tagline {
+  font-family: var(--font-label);
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  margin-top: 0.5rem;
+  letter-spacing: 0.1em;
+}
+
+/* ----- Social ----- */
+.footer__social-label {
+  font-family: var(--font-label);
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-xs);
+}
+
+.footer__social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-gold);
+  text-decoration: none;
+  font-family: var(--font-label);
+  font-size: var(--text-md);
+  transition: color var(--transition-fast);
+}
+
+.footer__social-link:hover,
+.footer__social-link:focus-visible {
+  color: var(--color-gold-light);
+}
+
+.footer__social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* ----- Producers ----- */
+.footer__producers-label {
+  font-family: var(--font-label);
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-xs);
+}
+
+.footer__producers-logos {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .footer__producers-logos {
+    justify-content: center;
+  }
+}
+
+.footer__producer-logo {
+  max-height: 40px;
+  opacity: 0.7;
+  transition: opacity var(--transition-fast);
+}
+
+.footer__producer-logo:hover {
+  opacity: 1;
+}
+
+/* ----- Developer credit ----- */
+.footer__dev-credit {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  margin-top: var(--space-sm);
+}
+
+.footer__dev-link {
+  color: var(--color-gold);
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+
+.footer__dev-link:hover,
+.footer__dev-link:focus-visible {
+  color: var(--color-gold-light);
+}
+
+/* ----- Bottom bar ----- */
+.footer__bottom {
+  border-top: var(--border-muted);
+  text-align: center;
+  padding: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.footer__copyright {
+  font-size: var(--text-xs);
+  color: var(--color-disabled);
+}

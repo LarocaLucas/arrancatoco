@@ -1,0 +1,14 @@
+{
+  "name": "arranca-toco-2026",
+  "version": "1.0.0",
+  "description": "Site oficial do evento Arranca Toco 2026 - 25 Anos",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "canvas": "^3.2.3",
+    "vite": "^5.0.0"
+  }
+}
