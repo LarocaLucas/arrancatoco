@@ -32,7 +32,7 @@ export const CONFIG = {
     },
     instagram: "https://www.instagram.com/arranca_oficial/",
     // TODO: Substituir pelo link real da página do evento no Cheers
-    cheersLink: "#",
+    cheersLink: "https://cheers.com.br/evento/arranca-toco-25-anos-33279",
     // TODO: Substituir pelo texto oficial da organização
     description: `A maior festa da Engenharia Civil da UEPG chega à sua 25ª edição com tudo o que você espera e muito mais. Open bar completo, line-up explosivo e a energia que só os Campos Gerais sabem fazer. Prepare-se para uma noite histórica que celebra 25 anos de tradição, adrenalina e diversão sem limites.`
   },
