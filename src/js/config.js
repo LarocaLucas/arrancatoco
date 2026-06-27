@@ -53,8 +53,8 @@ export const CONFIG = {
   ],
   tickets: {
     pista: [
-      { name: "LOTE RELÂMPAGO", price: "R$ 70,00",  status: "active" },
-      { name: "PRIMEIRO LOTE",  price: "R$ 80,00",  status: "upcoming" },
+      { name: "LOTE RELÂMPAGO", price: "R$ 70,00",  status: "past"   },
+      { name: "PRIMEIRO LOTE",  price: "R$ 80,00",  status: "active" },
       { name: "SEGUNDO LOTE",   price: "R$ 85,00",  status: "upcoming" },
       { name: "TERCEIRO LOTE",  price: "R$ 90,00",  status: "upcoming" },
       { name: "QUARTO LOTE",    price: "R$ 95,00",  status: "upcoming" },
@@ -66,8 +66,8 @@ export const CONFIG = {
       { name: "DÉCIMO LOTE",    price: "R$ 200,00", status: "upcoming" }
     ],
     camarote: [
-      { name: "LOTE RELÂMPAGO", price: "R$ 100,00", status: "active" },
-      { name: "PRIMEIRO LOTE",  price: "R$ 115,00", status: "upcoming" },
+      { name: "LOTE RELÂMPAGO", price: "R$ 100,00", status: "past"   },
+      { name: "PRIMEIRO LOTE",  price: "R$ 115,00", status: "active" },
       { name: "SEGUNDO LOTE",   price: "R$ 130,00", status: "upcoming" },
       { name: "TERCEIRO LOTE",  price: "R$ 140,00", status: "upcoming" },
       { name: "QUARTO LOTE",    price: "R$ 150,00", status: "upcoming" },
