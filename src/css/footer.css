@@ -23,19 +23,29 @@
 @media (min-width: 768px) {
   .footer__container {
     grid-template-columns: 1fr 1fr 1fr;
-    text-align: left;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+/* ----- Brand (logo + tagline) ----- */
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer__brand {
+    align-items: center;
   }
 }
 
 /* ----- Logo ----- */
 .footer__logo {
   max-width: 120px;
-}
-
-@media (max-width: 767px) {
-  .footer__logo {
-    margin: 0 auto;
-  }
+  display: block;
 }
 
 /* ----- Tagline ----- */
@@ -45,9 +55,17 @@
   color: var(--color-muted);
   margin-top: 0.5rem;
   letter-spacing: 0.1em;
+  text-align: center;
 }
 
 /* ----- Social ----- */
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .footer__social-label {
   font-family: var(--font-label);
   font-size: var(--text-xs);
@@ -79,6 +97,13 @@
 }
 
 /* ----- Producers ----- */
+.footer__producers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .footer__producers-label {
   font-family: var(--font-label);
   font-size: var(--text-xs);
@@ -92,12 +117,7 @@
   display: flex;
   gap: var(--space-md);
   align-items: center;
-}
-
-@media (max-width: 767px) {
-  .footer__producers-logos {
-    justify-content: center;
-  }
+  justify-content: center;
 }
 
 .footer__producer-logo {

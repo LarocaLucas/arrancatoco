@@ -44,7 +44,7 @@ export const CONFIG = {
     fallbackAlt: "Arranca Toco 2026 — 25 Anos"
   },
   artists: [
-    { id: 1, name: "???", revealDate: null, isRevealed: false, hiddenImage: `${BASE}images/artists/artist-1-hidden.png`, revealedImage: `${BASE}images/artists/artist-1-revealed.png`, altHidden: "Artista 1 — Em breve", altRevealed: "Artista 1" },
+    { id: 1, name: "Jonatas Felipe", revealDate: null, isRevealed: true, hiddenImage: `${BASE}images/artists/artist-1-hidden.png`, revealedImage: `${BASE}images/artists/artist-1-revealed.jpg`, altHidden: "Artista 1 — Em breve", altRevealed: "Jonatas Felipe" },
     { id: 2, name: "???", revealDate: null, isRevealed: false, hiddenImage: `${BASE}images/artists/artist-2-hidden.png`, revealedImage: `${BASE}images/artists/artist-2-revealed.png`, altHidden: "Artista 2 — Em breve", altRevealed: "Artista 2" },
     { id: 3, name: "???", revealDate: null, isRevealed: false, hiddenImage: `${BASE}images/artists/artist-3-hidden.png`, revealedImage: `${BASE}images/artists/artist-3-revealed.png`, altHidden: "Artista 3 — Em breve", altRevealed: "Artista 3" },
     { id: 4, name: "???", revealDate: null, isRevealed: false, hiddenImage: `${BASE}images/artists/artist-4-hidden.png`, revealedImage: `${BASE}images/artists/artist-4-revealed.png`, altHidden: "Artista 4 — Em breve", altRevealed: "Artista 4" },
@@ -66,10 +66,10 @@ export const CONFIG = {
       { name: "DÉCIMO LOTE",    price: "R$ 200,00", status: "upcoming" }
     ],
     camarote: [
-      { name: "LOTE RELÂMPAGO", price: "R$ 100,00", status: "past"   },
+      { name: "LOTE RELÂMPAGO", price: "R$ 115,00", status: "past"   },
       { name: "PRIMEIRO LOTE",  price: "R$ 115,00", status: "active" },
       { name: "SEGUNDO LOTE",   price: "R$ 130,00", status: "upcoming" },
-      { name: "TERCEIRO LOTE",  price: "R$ 140,00", status: "upcoming" },
+      { name: "TERCEIRO LOTE",  price: "R$ 135,00", status: "upcoming" },
       { name: "QUARTO LOTE",    price: "R$ 150,00", status: "upcoming" },
       { name: "QUINTO LOTE",    price: "R$ 160,00", status: "upcoming" },
       { name: "SEXTO LOTE",     price: "R$ 170,00", status: "upcoming" },

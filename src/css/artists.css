@@ -75,7 +75,7 @@
 .artist-card__flipper {
   position: relative;
   width: 100%;
-  padding-top: 140%;
+  padding-top: 100%;
   transform-style: preserve-3d;
   transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   will-change: transform;
@@ -120,22 +120,16 @@
   object-fit: cover;
   position: absolute;
   inset: 0;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* ----- Artist name ----- */
+.artist-card:hover .artist-card__img {
+  transform: scale(1.05);
+}
+
+/* ----- Artist name (hidden — já incluso na arte oficial) ----- */
 .artist-card__name {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
-  font-family: var(--font-display);
-  font-size: var(--text-lg);
-  color: var(--color-white);
-  padding: 1.5rem 1rem;
-  text-align: center;
-  letter-spacing: 0.05em;
-  z-index: 2;
+  display: none;
 }
 
 /* ----- Front face countdown wrapper ----- */
