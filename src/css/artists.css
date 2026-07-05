@@ -69,6 +69,18 @@
 .artist-card {
   perspective: 800px;
   cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.4s ease,
+              z-index 0s;
+  border-radius: var(--radius-md);
+  z-index: 1;
+}
+
+.artist-card:hover {
+  transform: scale(1.07) translateY(-6px);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.25),
+              0 0 15px rgba(212, 175, 55, 0.15);
+  z-index: 10;
 }
 
 /* ----- Flipper ----- */
@@ -103,6 +115,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: border-color 0.4s ease;
+}
+
+.artist-card:hover .artist-card__front {
+  border-color: rgba(212, 175, 55, 0.4);
 }
 
 /* Back face */
@@ -120,11 +137,13 @@
   object-fit: cover;
   position: absolute;
   inset: 0;
-  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              filter 0.4s ease;
 }
 
 .artist-card:hover .artist-card__img {
   transform: scale(1.05);
+  filter: brightness(1.1);
 }
 
 /* ----- Artist name (hidden — já incluso na arte oficial) ----- */
