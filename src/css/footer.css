@@ -130,6 +130,10 @@
   opacity: 1;
 }
 
+.footer__producer-logo--tf {
+  max-height: 24px; /* Menor altura para equilibrar o visual com a logo da MGPRD */
+}
+
 /* ----- Developer credit ----- */
 .footer__dev-credit {
   font-size: var(--text-xs);
