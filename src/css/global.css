@@ -83,6 +83,8 @@ body {
   background: transparent;
   border: 2px solid var(--color-gold);
   color: var(--color-gold);
+  padding: 0.85rem 2rem;
+  font-size: var(--text-md);
 }
 
 .btn--gold:hover,
