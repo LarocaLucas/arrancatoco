@@ -37,7 +37,7 @@ export const CONFIG = {
   },
   hero: {
     // TODO: Alterar para true quando o arquivo de vídeo estiver disponível
-    useVideo: false,
+    useVideo: true,
     videoSrc: `${BASE}video/hero-video.mp4`,
     fallbackImage: `${BASE}images/fallback-hero.jpg`,
     fallbackAlt: "Arranca Toco 2026 — 25 Anos"
