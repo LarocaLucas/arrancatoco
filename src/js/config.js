@@ -66,9 +66,9 @@ export const CONFIG = {
     ],
     camarote: [
       { name: "LOTE RELÂMPAGO", price: "R$ 115,00", status: "past"   },
-      { name: "PRIMEIRO LOTE",  price: "R$ 115,00", status: "active" },
-      { name: "SEGUNDO LOTE",   price: "R$ 130,00", status: "upcoming" },
-      { name: "TERCEIRO LOTE",  price: "R$ 135,00", status: "upcoming" },
+      { name: "PRIMEIRO LOTE",  price: "R$ 115,00", status: "past" },
+      { name: "SEGUNDO LOTE",   price: "R$ 130,00", status: "past" },
+      { name: "TERCEIRO LOTE",  price: "R$ 135,00", status: "active" },
       { name: "QUARTO LOTE",    price: "R$ 150,00", status: "upcoming" },
       { name: "QUINTO LOTE",    price: "R$ 160,00", status: "upcoming" },
       { name: "SEXTO LOTE",     price: "R$ 170,00", status: "upcoming" },
