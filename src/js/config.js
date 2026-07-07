@@ -27,7 +27,7 @@ export const CONFIG = {
       city: "Ponta Grossa — PR",
       cep: "84060-170",
       mapsLink: "https://www.google.com/maps/dir/?api=1&destination=Centro+de+Eventos+Ponta+Grossa+PR",
-      mapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.5!2d-50.17284!3d-25.08546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e81abdc999a493%3A0x713b76a5c5b472c6!2sCentro%20de%20Eventos%20de%20Ponta%20Grossa!5e0!3m2!1spt-BR!2sbr!4v1720000000000!5m2!1spt-BR!2sbr"
+      mapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.4756044140613!2d-50.2029706!3d-25.1196067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e8108b57159b07%3A0x507c60d9bd2ed58b!2sCentro%20de%20Eventos!5e0!3m2!1spt-BR!2sbr!4v1783389128768!5m2!1spt-BR!2sbr"
     },
     instagram: "https://www.instagram.com/arranca_oficial/",
     // TODO: Substituir pelo link real da página do evento no Cheers
