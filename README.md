@@ -27,7 +27,7 @@ Landing page single-page com experiência visual imersiva: countdown regressivo,
 - **Fontes:** Google Fonts — Bebas Neue, Rajdhani, Inter
 - **Ícones:** SVG inline
 - **Mapas:** Google Maps iframe embed
-- **Deploy:** GitHub Pages → Cloudflare Pages
+- **Deploy:** Cloudflare Pages
 
 ---
 
@@ -154,7 +154,7 @@ hero: {
 
 ---
 
-## 🌐 Deploy — GitHub + Cloudflare Pages
+## 🌐 Deploy — Cloudflare Pages
 
 ### Passo a Passo:
 
@@ -178,16 +178,16 @@ hero: {
 
 ## ✅ TODO List
 
-- [ ] Substituir logo placeholder pelo logo oficial do evento
-- [ ] Substituir logos das produtoras (TF e MGPRD) pelos oficiais
+- [x] Substituir logo placeholder pelo logo oficial do evento
+- [x] Substituir logos das produtoras (TF e MGPRD) pelos oficiais
 - [ ] Adicionar fotos reais dos artistas (hidden + revealed)
-- [ ] Adicionar vídeo do hero (`public/video/hero-video.mp4`)
+- [x] Adicionar vídeo do hero (`public/video/hero-video.mp4`)
 - [ ] Substituir texto de descrição do evento pelo oficial
 - [ ] Definir link do Cheers para compra de ingressos
 - [ ] Definir datas de reveal dos artistas
 - [ ] Confirmar data/hora exata do evento
 - [ ] Gerar embed URL do Google Maps com localização exata
-- [ ] Configurar domínio personalizado (arrancatoco.com.br)
+- [x] Configurar domínio personalizado (arrancatocopg.com.br)
 - [ ] Substituir OG Image pelo material oficial
 
 ---
