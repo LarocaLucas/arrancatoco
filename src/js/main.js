@@ -13,6 +13,7 @@ import '../css/artists.css';
 import '../css/tickets.css';
 import '../css/footer.css';
 import '../css/floating-btn.css';
+import '../css/lightbox.css';
 
 import { initHero }        from './hero.js';
 import { initAbout }       from './about.js';
@@ -21,6 +22,7 @@ import { initArtists }     from './artists.js';
 import { initTickets }     from './tickets.js';
 import { initFooter }      from './footer.js';
 import { initFloatingBtn } from './floating-btn.js';
+import { initLightbox }    from './lightbox.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   try {
@@ -31,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTickets();
     initFooter();
     initFloatingBtn();
+    initLightbox();
     console.log('[Arranca Toco] Site inicializado com sucesso.');
   } catch (error) {
     console.error('[Arranca Toco] Erro na inicialização:', error);

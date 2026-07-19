@@ -95,6 +95,7 @@
 
 .artist-card--revealed .artist-card__flipper {
   transform: rotateY(180deg);
+  cursor: pointer;
 }
 
 /* ----- Front & Back faces ----- */

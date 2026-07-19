@@ -1,0 +1,179 @@
+/* ============================================================
+   lightbox.css — Lightbox Gallery — Arranca Toco 2026
+   ============================================================ */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity var(--transition-normal), visibility var(--transition-normal);
+}
+
+.lightbox--hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.lightbox__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 7, 19, 0.95);
+  backdrop-filter: blur(8px);
+  cursor: zoom-out;
+}
+
+.lightbox__container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  padding: var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none; /* Apenas botões e imagem devem receber click */
+}
+
+.lightbox__content {
+  position: relative;
+  pointer-events: auto;
+  max-width: 85vw;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox__img {
+  max-width: 100%;
+  max-height: calc(85vh - 40px); /* Subtrai espaço da legenda */
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  user-select: none;
+  transform: scale(1);
+  transition: transform var(--transition-fast);
+}
+
+.lightbox:not(.lightbox--hidden) .lightbox__img {
+  animation: lightboxZoomIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.lightbox__caption {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--color-gold);
+  margin-top: var(--space-sm);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ----- Botões de Ação e Navegação ----- */
+.lightbox__close,
+.lightbox__nav {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: all var(--transition-fast);
+  backdrop-filter: blur(4px);
+}
+
+.lightbox__close:hover,
+.lightbox__nav:hover {
+  background: var(--color-gold);
+  color: var(--color-bg-deepest);
+  border-color: var(--color-gold);
+  transform: scale(1.1);
+}
+
+.lightbox__close {
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+}
+
+.lightbox__close svg {
+  width: 24px;
+  height: 24px;
+}
+
+.lightbox__nav {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+}
+
+.lightbox__nav:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox__nav svg {
+  width: 24px;
+  height: 24px;
+}
+
+.lightbox__nav--prev {
+  left: 20px;
+}
+
+.lightbox__nav--next {
+  right: 20px;
+}
+
+/* Esconder navegação caso só tenha 1 artista (via classe de modificador) */
+.lightbox__nav--hidden {
+  display: none !important;
+}
+
+/* Responsivo */
+@media (min-width: 768px) {
+  .lightbox__nav {
+    width: 60px;
+    height: 60px;
+  }
+  .lightbox__nav svg {
+    width: 32px;
+    height: 32px;
+  }
+  .lightbox__nav--prev {
+    left: 40px;
+  }
+  .lightbox__nav--next {
+    right: 40px;
+  }
+  .lightbox__close {
+    top: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Animations */
+@keyframes lightboxZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
