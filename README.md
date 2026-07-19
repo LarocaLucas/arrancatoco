@@ -180,15 +180,15 @@ hero: {
 
 - [x] Substituir logo placeholder pelo logo oficial do evento
 - [x] Substituir logos das produtoras (TF e MGPRD) pelos oficiais
-- [ ] Adicionar fotos reais dos artistas (hidden + revealed)
+- [x] Adicionar fotos reais dos artistas (Atualização contínua via admin)
 - [x] Adicionar vídeo do hero (`public/video/hero-video.mp4`)
-- [ ] Substituir texto de descrição do evento pelo oficial
-- [ ] Definir link do Cheers para compra de ingressos
-- [ ] Definir datas de reveal dos artistas
-- [ ] Confirmar data/hora exata do evento
-- [ ] Gerar embed URL do Google Maps com localização exata
+- [x] Substituir texto de descrição do evento pelo oficial
+- [x] Definir link do Cheers para compra de ingressos
+- [x] Definir datas de reveal dos artistas (Sendo revelados manualmente sob demanda)
+- [x] Confirmar data/hora exata do evento
+- [x] Gerar embed URL do Google Maps com localização exata
 - [x] Configurar domínio personalizado (arrancatocopg.com.br)
-- [ ] Substituir OG Image pelo material oficial
+- [x] Substituir OG Image pelo material oficial
 
 ---
 
