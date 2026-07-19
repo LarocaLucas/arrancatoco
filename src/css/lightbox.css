@@ -43,8 +43,8 @@
 .lightbox__content {
   position: relative;
   pointer-events: auto;
-  max-width: 85vw;
-  max-height: 85vh;
+  width: 100%;
+  max-width: calc(100vw - 110px); /* Espaço para as setas no mobile */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +52,7 @@
 
 .lightbox__img {
   max-width: 100%;
-  max-height: calc(85vh - 40px); /* Subtrai espaço da legenda */
+  max-height: calc(100vh - 140px); /* Espaço para legenda e botão X */
   object-fit: contain;
   border-radius: var(--radius-md);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
@@ -91,6 +91,7 @@
   pointer-events: auto;
   transition: all var(--transition-fast);
   backdrop-filter: blur(4px);
+  z-index: 10;
 }
 
 .lightbox__close:hover,
@@ -102,9 +103,9 @@
 }
 
 .lightbox__close {
-  top: 20px;
-  right: 20px;
-  width: 44px;
+  top: 15px;
+  right: 15px;
+  width: 40px;
   height: 44px;
 }
 
@@ -116,8 +117,8 @@
 .lightbox__nav {
   top: 50%;
   transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
 }
 
 .lightbox__nav:hover {
@@ -130,11 +131,11 @@
 }
 
 .lightbox__nav--prev {
-  left: 20px;
+  left: 10px;
 }
 
 .lightbox__nav--next {
-  right: 20px;
+  right: 10px;
 }
 
 /* Esconder navegação caso só tenha 1 artista (via classe de modificador) */
@@ -144,6 +145,12 @@
 
 /* Responsivo */
 @media (min-width: 768px) {
+  .lightbox__content {
+    max-width: 85vw;
+  }
+  .lightbox__img {
+    max-height: calc(85vh - 40px);
+  }
   .lightbox__nav {
     width: 60px;
     height: 60px;

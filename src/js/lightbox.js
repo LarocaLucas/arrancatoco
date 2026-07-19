@@ -95,4 +95,27 @@ export const initLightbox = () => {
     if (e.key === 'ArrowLeft') navigate(-1);
     if (e.key === 'ArrowRight') navigate(1);
   });
+
+  // Swipe navigation (Touch events)
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  lightbox.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  lightbox.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  }, { passive: true });
+
+  const handleSwipe = () => {
+    const swipeThreshold = 50; // pixels
+    if (touchEndX < touchStartX - swipeThreshold) {
+      navigate(1); // Swipe left -> Next
+    }
+    if (touchEndX > touchStartX + swipeThreshold) {
+      navigate(-1); // Swipe right -> Prev
+    }
+  };
 };
